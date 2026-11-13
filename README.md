@@ -3,10 +3,14 @@
 Publishes the **Liberland Grand Christmas Gala** page at **https://christmas.ll.land**.
 
 The page itself lives in [`liberland/site`](https://github.com/liberland/site) under `christmas-gala/`
-(Vite + React, prerendered). This repository only holds `.github/workflows/deploy.yml`: every 5 minutes
+(Vite + React, prerendered). This repository only holds `.github/workflows/deploy.yml`: on a schedule
 it checks whether `christmas-gala/` changed on `master`, builds it with
 `SITE_URL=https://christmas.ll.land/ BASE_PATH=/` and deploys it to GitHub Pages. The deployed commit is
 at `/version.txt`.
+
+**Deploying right away:** the schedule asks for every 5 minutes, but GitHub runs scheduled workflows far
+less often (in practice every few hours). To publish a change immediately, open **Actions → Deploy
+christmas.ll.land → Run workflow**. Any push to `main` here also deploys.
 
 ## Languages
 
